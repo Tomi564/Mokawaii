@@ -1,0 +1,1165 @@
+body {
+    padding-top: 120px;
+}
+
+/* === Navegación Principal === */
+
+.custom-navbar {
+    background-color: #41D2F2;
+    padding: 2rem 0 2rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.9rem; 
+    color: white; 
+    margin-left: 0; 
+    padding-left: 20px; 
+    font-family: 'Yeyey', sans-serif;
+}
+
+.navbar-nav {
+    margin-left: 310px;
+    padding-right: 20px; 
+    font-size: 1.3rem;
+    font-family: 'Mf Fine Again', sans-serif;
+}
+  
+.navbar-nav .nav-item {
+    margin-left: 50px; 
+}
+  
+.navbar-nav .nav-item .nav-link {
+    position: relative; 
+    color: white; 
+    text-decoration: none; 
+    padding: 5px 0; 
+}
+
+.navbar-nav .nav-item .nav-link::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+    width: 100%; 
+    height: 2px; 
+    background-color: #BF9075; 
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 0.6s ease; 
+}
+  
+.navbar-nav .nav-item .nav-link:hover::after {
+    transform: scaleX(1); 
+}
+
+/* === Sección de Introducción === */
+
+#intro-empresa h2 {
+    font-family: 'Mf Fine Again', sans-serif;
+    font-size: 2.5rem;
+}
+
+#intro-empresa p {
+    font-family: 'Sugar Recipe', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* === Sección de Productos === */
+
+.card {
+    background-color: #AFE3EE;
+}
+
+.card img {
+    width: 90%;
+    margin: 20px 0 0 20px;
+}
+
+.card .btn {
+    background-color: #41D2F2;
+    color: white;
+}
+
+.card .btn:hover {
+    background-color: #BF9075;
+}
+
+#productos-peluches h2 {
+    font-family: 'Mf Fine Again', sans-serif;
+    font-size: 2.5rem;
+}
+
+#productos-peluches h5 {
+    font-family: 'Mf Fine Again', sans-serif;
+}
+
+#productos-peluches p {
+    font-family: 'Sugar Recipe', sans-serif;
+}
+
+/* === Modal para Detalle de Producto === */
+
+.modal-title {
+    font-family: 'Mf Fine Again', sans-serif;
+    color: #258ea6;
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    font-family: 'Sugar Recipe', sans-serif;
+    background-color: #AFE3EE;
+}
+
+.modal-body img {
+    width: 80%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 0 10px 45px;
+}
+
+.btn-comprar {
+    background-color: #41D2F2;
+    color: white;
+}
+
+.btn-comprar:hover {
+    background-color: #BF9075;
+}
+
+/* === Notificaciones Toast === */
+
+.custom-toast {
+    background-color: #41D2F2; /* Fondo rosa claro (puedes cambiarlo) */
+    color: white; /* Texto oscuro para contraste */
+}
+
+.custom-toast button {
+    margin-top: 12px;
+}
+
+/* === Sección de Detalles del Producto === */
+
+#detalle-producto h2 {
+    font-family: 'Mf Fine Again', sans-serif;
+    font-size: 2.5rem;
+}
+
+#detalle-producto h4 {
+    font-family: 'Mf Fine Again', sans-serif;
+    font-size: 1.5rem;
+}
+
+#detalle-producto strong {
+    font-family: 'Mf Fine Again', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-decoration-color: #41D2F2;
+    text-underline-offset: 5px;
+    text-decoration-style: solid;
+}
+
+#detalle-producto li {
+    font-family: 'Sugar Recipe', sans-serif;
+    font-size: 1.2rem;
+}
+
+#detalle-producto h5 {
+    font-family: 'Mf Fine Again', sans-serif;
+    font-size: 1.5rem;
+}
+
+#detalle-producto p {
+    font-family: 'Sugar Recipe', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* === Galería de Imágenes === */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.gallery-img {
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 200px;
+    max-width: 90%;
+}
+
+.gallery-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.detalle-producto {
+    display: flex;
+    align-items: center;
+}
+
+.info-detalle {
+    font-size: 1.2rem;
+}
+
+/* === Sección Crear Peluche === */
+
+#crear-peluche h2 {
+    font-family: 'Mf Fine Again', sans-serif;
+    font-size: 2.5rem;
+}
+
+#crear-peluche h3 {
+    font-family: 'Mf Fine Again', sans-serif;
+}
+
+#crear-peluche p {
+    font-family: 'Sugar Recipe', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* === Acordeón === */
+
+.accordion-item {
+    border: 2px solid;
+    border-color: #41D2F2;
+}
+
+.accordion-body img {
+    width: 70%;
+    height: auto;
+}
+
+/* === Sección de Contacto === */
+
+#contacto h2 {
+    font-family: 'Mf Fine Again', sans-serif;
+    font-size: 2.5rem;
+}
+
+#contacto p {
+    font-family: 'Sugar Recipe', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#contacto strong {
+    font-family: 'Yeyey', sans-serif;
+    color: #41D2F2;
+    letter-spacing: 2px;
+}
+
+#contacto label {
+    font-family: 'Mf Fine Again', sans-serif;
+}
+
+/* === Formulario === */
+
+.form-control {
+    border: none; 
+    border-bottom: 2px solid #41D2F2; 
+    border-radius: 0; 
+    outline: none; 
+    box-shadow: none; 
+}
+
+.form-select {
+    border: none; 
+    border-bottom: 2px solid #41D2F2; 
+    border-radius: 0; 
+    outline: none; 
+    box-shadow: none; 
+    background-color: transparent; 
+    padding: 5px 0; 
+    font-size: 16px; 
+    width: 100%; 
+}
+
+.form-select:focus {
+    border-color: #BF9075; 
+    box-shadow: none; 
+}
+
+.form-control:focus {
+    border-color: #BF9075; 
+    box-shadow: none; 
+}
+
+button[type="submit"] {
+    display: block; 
+    margin: 20px auto; 
+    border-radius: 25px; 
+    padding: 10px 30px; 
+    background-color: #41D2F2; 
+    color: white; 
+    border: none; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+button[type="submit"]:hover {
+    background-color: #BF9075; 
+}
+
+/* === Footer === */
+
+.footer {
+    background-color: #41D2F2;
+    color: white;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Yeyey', sans-serif;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    margin: 10px 0 0 15px;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.autor-img {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 100px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+  /* Modal */
+.modal-datos {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content-datos {
+    background-color: #AFE3EE;
+    margin: 150px auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 850px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-body-datos {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.modal-foto-datos {
+    width: 250px;
+    height: auto;
+    margin-right: 90px;
+    border-radius: 8px;
+}
+
+.modal-detalles {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-detalles strong {
+    font-family: 'Mf Fine Again', sans-serif;
+    font-size: 1.1rem;
+}
+
+.modal-detalles p {
+    font-family: 'Sugar Recipe', sans-serif;
+}
+
+.modal-detalles a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #BF9075;
+}
+
+.modal-detalles a img {
+    width: 50px;
+    height: 50px;
+}
+
+.cerrar-boton {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.cerrar-boton:hover,
+.cerrar-boton:focus {
+    color: black;
+}
+  
+.btn {
+    font-family: 'Sugar Recipe', sans-serif;
+}
+
+
+
+
+
+/* === Botón Carrito en Navbar === */
+
+.cart-btn {
+  background: white;
+  border: 2px solid white;
+  color: #41D2F2;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.cart-btn:hover {
+  background-color: #BF9075;
+  border-color: #BF9075;
+  color: white;
+}
+
+.cart-badge {
+  background-color: #BF9075;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+/* === Carrito Offcanvas === */
+
+.carrito-offcanvas {
+  font-family: 'Sugar Recipe', sans-serif;
+}
+
+.carrito-offcanvas .offcanvas-title {
+  font-family: 'Mf Fine Again', sans-serif;
+  font-size: 1.5rem;
+  color: #41D2F2;
+}
+
+.carrito-item {
+  background-color: #f0fafc;
+  border-radius: 10px;
+  border: 1px solid #d0eef5;
+}
+
+.carrito-item-nombre {
+  font-family: 'Mf Fine Again', sans-serif;
+  font-size: 1rem;
+}
+
+.carrito-item-precio {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.btn-qty {
+  background-color: #41D2F2;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  line-height: 1;
+  font-size: 1.1rem;
+}
+
+.btn-qty:hover {
+  background-color: #BF9075;
+  color: white;
+}
+
+.btn-eliminar {
+  background: transparent;
+  color: #999;
+  border: none;
+  font-size: 1rem;
+  padding: 2px 6px;
+}
+
+.btn-eliminar:hover {
+  color: #e74c3c;
+}
+
+.carrito-total-row {
+  font-family: 'Mf Fine Again', sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* === Modal Checkout === */
+
+.checkout-modal-content {
+  font-family: 'Sugar Recipe', sans-serif;
+}
+
+.checkout-modal-content .modal-header {
+  background-color: #41D2F2;
+}
+
+.checkout-modal-content .modal-title {
+  color: white;
+  font-family: 'Mf Fine Again', sans-serif;
+}
+
+.checkout-modal-content .btn-close {
+  filter: brightness(0) invert(1);
+}
+
+.checkout-section-title {
+  font-family: 'Mf Fine Again', sans-serif;
+  color: #41D2F2;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #d0eef5;
+  padding-bottom: 6px;
+}
+
+.resumen-box {
+  background-color: #f0fafc;
+  border-radius: 10px;
+  padding: 14px 16px;
+  border: 1px solid #d0eef5;
+}
+
+.checkout-label {
+  font-family: 'Mf Fine Again', sans-serif;
+  font-size: 0.95rem;
+}
+
+.checkout-input {
+  border: none;
+  border-bottom: 2px solid #41D2F2;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+}
+
+.checkout-input:focus {
+  border-color: #BF9075;
+  box-shadow: none;
+}
+
+/* === Check Circle (confirmación) === */
+
+.check-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #41D2F2;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+/* === Caja de info (transferencia / retiro) === */
+
+.info-pago-box {
+  background-color: #f0fafc;
+  border: 1px solid #d0eef5;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-family: 'Sugar Recipe', sans-serif;
+  font-size: 0.95rem;
+}
+
+/* === Controles del carrusel === */
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  opacity: 1;
+  backdrop-filter: blur(4px);
+  transition: background-color 0.2s;
+}
+
+.carousel-control-prev {
+  left: 12px;
+}
+
+.carousel-control-next {
+  right: 12px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(255,255,255,0.6);
+}
+
+/* === Carrusel mejorado === */
+
+.carousel-img {
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 70%, transparent 100%);
+}
+
+.carousel-caption-custom {
+  left: 8%;
+  right: auto;
+  bottom: 50%;
+  transform: translateY(50%);
+  text-shadow: none;
+}
+
+.carousel-tag {
+  display: inline-block;
+  background-color: #41D2F2;
+  color: white;
+  font-family: 'Sugar Recipe', sans-serif;
+  font-size: 0.9rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.carousel-caption-custom h2 {
+  font-family: 'Mf Fine Again', sans-serif;
+  font-size: 2.2rem;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.btn-carousel {
+  background-color: white;
+  color: #41D2F2;
+  font-family: 'Sugar Recipe', sans-serif;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 8px 24px;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.btn-carousel:hover {
+  background-color: #BF9075;
+  color: white;
+}
+
+/* === Sección Nosotros mejorada === */
+
+.nosotros-intro {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Sugar Recipe', sans-serif;
+  font-size: 1.1rem;
+}
+
+.nosotros-card {
+  background-color: #f0fafc;
+  border: 2px solid #d0eef5;
+  border-radius: 14px;
+  padding: 28px 16px 20px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.nosotros-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(65,210,242,0.2);
+}
+
+.nosotros-icono {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.nosotros-card h4 {
+  font-family: 'Mf Fine Again', sans-serif;
+  font-size: 1.4rem;
+  color: #41D2F2;
+  margin-bottom: 4px;
+}
+
+.nosotros-card p {
+  font-family: 'Sugar Recipe', sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+/* === Filtro de productos === */
+
+.filtro-input {
+  max-width: 280px;
+  border: none;
+  border-bottom: 2px solid #41D2F2;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.filtro-input:focus {
+  border-color: #BF9075;
+  box-shadow: none;
+}
+
+.filtro-select {
+  max-width: 220px;
+  border: none;
+  border-bottom: 2px solid #41D2F2;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.filtro-select:focus {
+  border-color: #BF9075;
+  box-shadow: none;
+}
+
+/* === Detalle del producto mejorado === */
+
+.detalle-badge {
+  text-align: center;
+  font-family: 'Sugar Recipe', sans-serif;
+  color: #BF9075;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.detalle-precio-grande {
+  font-family: 'Mf Fine Again', sans-serif;
+  font-size: 2rem;
+  color: #41D2F2;
+  font-weight: bold;
+}
+
+.detalle-lista li {
+  margin-bottom: 8px;
+}
+
+.detalle-medios-pago {
+  background-color: #f0fafc;
+  border-radius: 10px;
+  padding: 12px 16px;
+  border-left: 3px solid #41D2F2;
+  font-family: 'Sugar Recipe', sans-serif;
+  font-size: 0.95rem;
+}
+
+.detalle-qty-input {
+  width: 52px;
+  text-align: center;
+  border: 1px solid #d0eef5;
+  border-radius: 6px;
+  padding: 4px;
+  font-family: 'Sugar Recipe', sans-serif;
+}
+
+/* Hide number input arrows */
+.detalle-qty-input::-webkit-inner-spin-button,
+.detalle-qty-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+.detalle-qty-input { -moz-appearance: textfield; }
+
+/* === Sección Testimonios === */
+
+.testimonios-section {
+  background-color: #f7fdfe;
+}
+
+.testimonios-section h2 {
+  font-family: 'Mf Fine Again', sans-serif;
+  font-size: 2.5rem;
+}
+
+.testimonios-sub {
+  font-family: 'Sugar Recipe', sans-serif;
+}
+
+.testimonio-card {
+  background-color: white;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(65,210,242,0.12);
+  border: 1px solid #e0f5fa;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.estrellas {
+  color: #f5a623;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.testimonio-texto {
+  font-family: 'Sugar Recipe', sans-serif;
+  font-size: 0.95rem;
+  color: #444;
+  flex-grow: 1;
+  font-style: italic;
+  margin: 0;
+}
+
+.testimonio-autor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.testimonio-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #41D2F2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Mf Fine Again', sans-serif;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.testimonio-autor strong {
+  font-family: 'Mf Fine Again', sans-serif;
+  font-size: 1rem;
+}
+
+/* === Contacto mejorado === */
+
+.contacto-exito-msg {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f0fafc;
+  border-radius: 14px;
+  border: 2px solid #d0eef5;
+  margin-bottom: 30px;
+}
+
+/* === Newsletter === */
+
+.newsletter-bar {
+  background-color: rgba(255,255,255,0.15);
+  padding: 24px 20px 20px;
+  text-align: center;
+}
+
+.newsletter-bar::before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 2px;
+  margin: 0 auto 16px;
+}
+
+.newsletter-titulo {
+  font-family: 'Sugar Recipe', sans-serif;
+  color: white;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter-input {
+  border: none;
+  border-radius: 25px;
+  padding: 8px 18px;
+  font-family: 'Sugar Recipe', sans-serif;
+  font-size: 0.9rem;
+  width: 260px;
+  outline: none;
+}
+
+.newsletter-btn {
+  background-color: #BF9075;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-family: 'Sugar Recipe', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.newsletter-btn:hover {
+  background-color: white;
+  color: #BF9075;
+}
+
+.newsletter-ok {
+  color: white;
+  font-family: 'Sugar Recipe', sans-serif;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* === Botón flotante de WhatsApp === */
+
+.wsp-flotante {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 1050;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.wsp-flotante:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* === Footer autor === */
+
+.footer-autor-texto {
+  font-family: 'Sugar Recipe', sans-serif;
+  color: white;
+  font-size: 0.95rem;
+  text-align: right;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.footer-autor-link {
+  color: white;
+  font-family: 'Mf Fine Again', sans-serif;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.25s;
+}
+
+.footer-autor-link:hover {
+  color: #4ade80;
+}
+
+@media screen and (min-width: 481px) and (max-width: 960px) {
+    body {
+        padding-top: 140px;
+    }
+
+    .navbar-brand { font-size: 3rem; }
+    .navbar-nav   { font-size: 2rem; }
+
+    /* Carrusel */
+    .carousel-img { max-height: 380px; }
+    .carousel-caption-custom h2 { font-size: 1.7rem; }
+
+    /* Nosotros */
+    #intro-empresa h2 { font-size: 2rem; }
+    #intro-empresa p  { font-size: 1rem; }
+
+    /* Productos */
+    .card { background-color: #AFE3EE; }
+    .card img { width: 90%; margin: 15px auto; display: block; }
+    .card .btn { background-color: #41D2F2; color: white; font-size: 1rem; }
+    #productos-peluches h2 { font-size: 2rem; }
+    #productos-peluches h5 { font-size: 1.2rem; }
+    #productos-peluches p  { font-size: 1rem; }
+
+    /* Filtro */
+    .filtro-input,
+    .filtro-select { max-width: 100%; width: 46%; }
+
+    /* Modal */
+    .modal-title { font-size: 1.3rem; }
+    .modal-body  { padding: 20px; }
+    .custom-toast { padding: 10px; border-radius: 8px; }
+    .custom-toast button { margin-top: 10px; }
+
+    /* Detalle */
+    #detalle-producto h2 { font-size: 2rem; }
+    .detalle-precio-grande { font-size: 1.6rem; }
+    .gallery { gap: 10px; }
+    .gallery-img { width: auto; max-width: 90%; }
+    .detalle-producto { flex-direction: column; }
+
+    /* Personalización */
+    #crear-peluche h2 { font-size: 2rem; }
+    #crear-peluche h3 { font-size: 1.5rem; }
+    #crear-peluche p  { font-size: 1rem; }
+    .accordion-body img { width: auto; height: auto; }
+
+    /* Testimonios */
+    .testimonios-section h2 { font-size: 2rem; }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+    }
+    .footer-autor-texto { text-align: center; }
+    .logo { margin-left: 0; }
+    .newsletter-input { width: 55%; }
+}
+
+@media screen and (max-width: 480px) {
+    body { padding-top: 120px; }
+
+    /* Navbar */
+    .navbar-brand { font-size: 2rem; }
+    .navbar-nav   { font-size: 1rem; }
+    .cart-btn     { padding: 3px 10px; font-size: 0.9rem; }
+
+    /* Carrusel */
+    .carousel-img { max-height: 260px; }
+    .carousel-caption-custom {
+        left: 5%;
+        bottom: 52%;
+    }
+    .carousel-caption-custom h2 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    .carousel-tag  { font-size: 0.7rem; padding: 3px 10px; }
+    .btn-carousel  { font-size: 0.8rem; padding: 5px 14px; }
+
+    /* Nosotros */
+    #intro-empresa h2 { font-size: 1.5rem; }
+    .nosotros-intro   { font-size: 0.9rem; padding: 0 10px; }
+    .nosotros-card h4 { font-size: 1.1rem; }
+    .nosotros-card p  { font-size: 0.85rem; }
+
+    /* Productos */
+    .card { background-color: #AFE3EE; }
+    .card img { width: 90%; margin: 15px auto; display: block; }
+    .card .btn { background-color: #41D2F2; color: white; font-size: 1rem; }
+    #productos-peluches h2 { font-size: 1.5rem; }
+    #productos-peluches h5 { font-size: 1rem; }
+    #productos-peluches p  { font-size: 0.9rem; }
+
+    /* Filtro — apilado verticalmente */
+    .filtro-input,
+    .filtro-select { max-width: 100%; width: 100%; }
+
+    /* Modal */
+    .modal-title { font-size: 1rem; }
+    .modal-body  { padding: 20px; }
+    .custom-toast { padding: 10px; border-radius: 8px; }
+    .custom-toast button { margin-top: 10px; }
+
+    /* Detalle */
+    #detalle-producto h2   { font-size: 1.5rem; }
+    .detalle-precio-grande { font-size: 1.4rem; }
+    .detalle-lista li      { font-size: 0.9rem; }
+    .detalle-medios-pago p { font-size: 0.85rem; }
+    .gallery     { gap: 8px; }
+    .gallery-img { width: auto; max-width: 90%; }
+    .detalle-producto { flex-direction: column; }
+    .detalle-cantidad { flex-wrap: wrap; }
+
+    /* Personalización */
+    #crear-peluche h2   { font-size: 1.5rem; }
+    #crear-peluche h3   { font-size: 1rem; }
+    #crear-peluche p    { font-size: 0.9rem; }
+    .accordion-body img { width: auto; height: auto; }
+
+    /* Testimonios */
+    .testimonios-section h2 { font-size: 1.5rem; }
+    .testimonio-card        { padding: 18px; }
+
+    /* Contacto */
+    #contacto h2 { font-size: 1.5rem; }
+    #contacto p  { font-size: 0.9rem; text-align: center; }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+    }
+    .footer-autor-texto { text-align: center; }
+    .logo { margin-left: 0; }
+    .social-icons a { margin-right: 12px; }
+    .footer-right { margin-right: 0; }
+
+    /* Newsletter */
+    .newsletter-input { width: 100%; max-width: 280px; }
+    .newsletter-form  { flex-direction: column; align-items: center; }
+
+    /* WhatsApp */
+    .wsp-flotante { width: 48px; height: 48px; bottom: 70px; right: 14px; }
+}

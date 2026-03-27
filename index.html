@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOKAWAII</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.cdnfonts.com/css/yeyey" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/sugar-recipe" rel="stylesheet">
+                
+  <link href="https://fonts.cdnfonts.com/css/mf-fine-again" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand titulo" href="#">MoKawaii</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#intro-empresa">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#productos-peluches">Peluches</a></li>
+          <li class="nav-item"><a class="nav-link" href="#detalle-producto">Informacion</a></li>
+          <li class="nav-item"><a class="nav-link" href="#crear-peluche">Personalizacion</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item d-flex align-items-center ms-2">
+            <button class="btn cart-btn" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas" onclick="renderCarrito()">
+              🛒 <span id="cart-badge" class="cart-badge" style="display:none;">0</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+
+    <!-- CARRUSEL -->
+      <div id="carouselIndicadores" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselIndicadores" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselIndicadores" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselIndicadores" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imgs/Banners/banners_movil_1.jpg" class="d-block w-100 carousel-img" alt="Banner 1">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption carousel-caption-custom text-start">
+              <p class="carousel-tag">Nuevos diseños</p>
+              <h2>Peluches únicos<br>hechos con amor</h2>
+              <a href="#productos-peluches" class="btn btn-carousel">Ver colección</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="imgs/Banners/banners_movil_2.jpg" class="d-block w-100 carousel-img" alt="Banner 2">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption carousel-caption-custom text-start">
+              <p class="carousel-tag">100% ecológicos</p>
+              <h2>Materiales seguros<br>para todas las edades</h2>
+              <a href="#intro-empresa" class="btn btn-carousel">Conocenos</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="imgs/Banners/banners_movil_3.jpg" class="d-block w-100 carousel-img" alt="Banner 3">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption carousel-caption-custom text-start">
+              <p class="carousel-tag">Personalización</p>
+              <h2>Creá tu propio<br>peluche a medida</h2>
+              <a href="#crear-peluche" class="btn btn-carousel">Diseñar ahora</a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicadores" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicadores" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+
+      <!-- Introducción a la empresa -->
+      <section id="intro-empresa" class="container py-5">
+        <h2 class="text-center mb-4">Acerca de Nosotros</h2>
+        <p class="text-center nosotros-intro mb-5">
+          En <strong>MoKawaii</strong>, nuestra misión es llevar alegría y ternura a cada hogar a través de nuestros productos. Fundada hace 10 años como una pequeña tienda familiar en Buenos Aires, hoy somos referentes en peluches kawaii personalizados, reconocidos por la calidad y el cariño que ponemos en cada creación.
+        </p>
+
+        <div class="row g-4 nosotros-stats">
+          <div class="col-6 col-md-3">
+            <div class="nosotros-card text-center">
+              <div class="nosotros-icono">🧸</div>
+              <h4>+1.000</h4>
+              <p>Peluches entregados</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="nosotros-card text-center">
+              <div class="nosotros-icono">🌱</div>
+              <h4>100%</h4>
+              <p>Materiales ecológicos</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="nosotros-card text-center">
+              <div class="nosotros-icono">🚚</div>
+              <h4>Todo el país</h4>
+              <p>Envíos disponibles</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="nosotros-card text-center">
+              <div class="nosotros-icono">✋</div>
+              <h4>10 años</h4>
+              <p>Hechos a mano</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Productos -->
+    <section id="productos-peluches" class="container py-5">
+        <h2 class="text-center mb-4">Nuestros Productos</h2>
+
+        <!-- Barra de búsqueda y filtro -->
+        <div class="d-flex flex-wrap gap-3 justify-content-center mb-4">
+          <input type="text" id="filtro-nombre" class="form-control filtro-input" placeholder="🔍 Buscar producto..." oninput="filtrarProductos()">
+          <select class="form-select filtro-select" id="filtro-precio" onchange="filtrarProductos()">
+            <option value="">Precio: todos</option>
+            <option value="0-28000">Hasta $28.000</option>
+            <option value="28001-32000">$28.000 – $32.000</option>
+            <option value="32001-99999">Más de $32.000</option>
+          </select>
+        </div>
+        <p id="sin-resultados" class="text-center text-muted" style="display:none;">No se encontraron productos con ese filtro.</p>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="productos-grid">
+          <!-- Producto 1 -->
+          <div class="col producto-col" data-nombre="cinnamonroll" data-precio="30000">
+            <div class="card h-100">
+              <img src="imgs/Productos/mokachan.jpg" class="card-img-top" alt="Peluche de Cinnamonroll">
+              <div class="card-body">
+                <h5 class="card-title">Cinnamonroll</h5>
+                <p class="card-text">Cinnamonroll disfrazada de osito.</p>
+                <p class="fw-bold">$30.000</p>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalProducto1">Ver más</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 2 -->
+          <div class="col producto-col" data-nombre="kuromi" data-precio="25000">
+            <div class="card h-100">
+              <img src="imgs/Productos/kuromi.jpg" class="card-img-top" alt="Peluche de Kuromi">
+              <div class="card-body">
+                <h5 class="card-title">Kuromi</h5>
+                <p class="card-text">El amigo de Cinnamonroll.</p>
+                <p class="fw-bold">$25.000</p>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalProducto2">Ver más</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 3 -->
+          <div class="col producto-col" data-nombre="gato salchicha" data-precio="28000">
+            <div class="card h-100">
+              <img src="imgs/Productos/gachicha.jpg" class="card-img-top" alt="Peluche de gato salchicha">
+              <div class="card-body">
+                <h5 class="card-title">Gato Salchicha</h5>
+                <p class="card-text">Un perro salchicha pero gato.</p>
+                <p class="fw-bold">$28.000</p>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalProducto3">Ver más</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 4 -->
+          <div class="col producto-col" data-nombre="capybara con mochila" data-precio="32000">
+            <div class="card h-100">
+              <img src="imgs/Productos/capymochi.jpg" class="card-img-top" alt="Peluche de capibara con mochila">
+              <div class="card-body">
+                <h5 class="card-title">Capybara con mochila</h5>
+                <p class="card-text">Capybara explorador.</p>
+                <p class="fw-bold">$32.000</p>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalProducto4">Ver más</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 5 -->
+          <div class="col producto-col" data-nombre="capybara con papas fritas" data-precio="29000">
+            <div class="card h-100">
+              <img src="imgs/Productos/capypapafrita.jpg" class="card-img-top" alt="Peluche de capibara comiendo papas fritas">
+              <div class="card-body">
+                <h5 class="card-title">Capybara con papas fritas</h5>
+                <p class="card-text">Capybara hambriento.</p>
+                <p class="fw-bold">$29.000</p>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalProducto5">Ver más</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 6 -->
+          <div class="col producto-col" data-nombre="capybara con tortuga" data-precio="35000">
+            <div class="card h-100">
+              <img src="imgs/Productos/capytortuga.jpg" class="card-img-top" alt="Peluche de capibara con sombrero de tortuga">
+              <div class="card-body">
+                <h5 class="card-title">Capybara con tortuga</h5>
+                <p class="card-text">Capybara con sombrero de tortuga.</p>
+                <p class="fw-bold">$35.000</p>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalProducto6">Ver más</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Modal Producto 1 -->
+      <div class="modal fade" id="modalProducto1" tabindex="-1" aria-labelledby="modalProducto1Label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalProducto1Label">Cinnamonroll</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <img src="imgs/Productos/mokachan.jpg" alt="Peluche de Cinnamonroll">
+              <p>Un adorable peluche de Cinnamonroll, el perrito celestial con orejas largas y suaves, perfecto para abrazar y decorar cualquier rincón. Su carita dulce y expresión encantadora harán que te enamores al instante. ¡Ideal para regalar o coleccionar!</p>
+              <p>$30.000</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-comprar" data-bs-dismiss="modal" onclick="agregarAlCarrito(1)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Producto 2 -->
+      <div class="modal fade" id="modalProducto2" tabindex="-1" aria-labelledby="modalProducto2Label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalProducto2Label">Kuromi</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <img src="imgs/Productos/kuromi.jpg" alt="Peluche de Kuromi">
+              <p>Este peluche de Kuromi combina dulzura y picardía con su clásico gorrito negro con calavera rosa. Suavidad incomparable y un diseño que encanta a los fans de lo kawaii. ¡Un compañero perfecto para quienes aman el estilo único y rebelde!</p>
+              <p>$25.000</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-comprar" data-bs-dismiss="modal" onclick="agregarAlCarrito(2)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Producto 3 -->
+      <div class="modal fade" id="modalProducto3" tabindex="-1" aria-labelledby="modalProducto3Label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalProducto3Label">Gato Salchicha</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <img src="imgs/Productos/gachicha.jpg" alt="Peluche de gato salchicha">
+              <p>Un peluche irresistiblemente tierno con forma de un gatito alargado como una salchicha. Su cuerpo esponjoso y su carita juguetona lo convierten en el compañero ideal para acurrucarte en cualquier momento. ¡Diversión y ternura en un solo peluche!</p>
+              <p>$28.000</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-comprar" data-bs-dismiss="modal" onclick="agregarAlCarrito(3)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Producto 4 -->
+      <div class="modal fade" id="modalProducto4" tabindex="-1" aria-labelledby="modalProducto4Label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalProducto4Label">Capybara con mochila</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <img src="imgs/Productos/capymochi.jpg" alt="Peluche de capibara con mochila">
+              <p>Este valiente capybara viene equipado con su sombrero de aventurero, listo para acompañarte en tus expediciones. Suave, acogedor y lleno de detalles encantadores que te harán sentir como si tuvieras un pequeño explorador en casa.</p>
+              <p>$32.000</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-comprar" data-bs-dismiss="modal" onclick="agregarAlCarrito(4)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Producto 5 -->
+      <div class="modal fade" id="modalProducto5" tabindex="-1" aria-labelledby="modalProducto5Label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalProducto5Label">Capybara con papas fritas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <img src="imgs/Productos/capypapafrita.jpg" alt="Peluche de capibara comiendo papas fritas">
+              <p>Un capybara adorable y siempre listo para comer, con un detalle encantador: lleva una pequeña hoja en su boca que lo hace aún más tierno. ¡Este peluche es el regalo perfecto para quienes aman a los animalitos curiosos y simpáticos!</p>
+              <p>$29.000</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-comprar" data-bs-dismiss="modal" onclick="agregarAlCarrito(5)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Producto 6 -->
+      <div class="modal fade" id="modalProducto6" tabindex="-1" aria-labelledby="modalProducto6Label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalProducto6Label">Capybara con tortuga</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <img src="imgs/Productos/capytortuga.jpg" alt="Peluche de capibara con sombrero de tortuga">
+              <p>¡Un peluche único y lleno de personalidad! Este capibara lleva un sombrero de tortuga que lo hace destacar. Suave y achuchable, es ideal para los amantes de lo original y divertido. ¡Un accesorio de peluche que no pasará desapercibido!</p>
+              <p>$35.000</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-comprar" data-bs-dismiss="modal" onclick="agregarAlCarrito(6)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toast Carrito -->
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="toast-carrito" class="toast align-items-center border-0 custom-toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="d-flex">
+            <div class="toast-body">
+              ✓ ¡Producto agregado al carrito!
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carrito Offcanvas -->
+      <div class="offcanvas offcanvas-end carrito-offcanvas" tabindex="-1" id="carritoOffcanvas">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Tu carrito 🛒</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+          <div id="carrito-items" class="flex-grow-1"></div>
+          <div class="border-top pt-3 mt-3">
+            <div class="d-flex justify-content-between fw-bold mb-3 carrito-total-row">
+              <span>Total:</span>
+              <span id="carrito-total">$0</span>
+            </div>
+            <button id="btn-ir-pago" class="btn btn-comprar w-100" onclick="abrirCheckout()" style="display:none;">
+              Ir al pago →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Checkout / Pasarela de Pago -->
+      <div class="modal fade" id="checkoutModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content checkout-modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="checkout-titulo">Finalizar Compra</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+
+              <!-- Paso 1: Datos de pago -->
+              <div id="paso-1" class="paso-pago">
+                <h6 class="checkout-section-title mb-3">Resumen del pedido</h6>
+                <div id="resumen-pedido" class="resumen-box mb-4"></div>
+
+                <h6 class="checkout-section-title mb-3">Método de entrega</h6>
+                <div class="mb-3">
+                  <select class="form-select checkout-input" id="metodo-entrega" onchange="mostrarEntrega()">
+                    <option value="" disabled selected>¿Cómo querés recibirlo?</option>
+                    <option value="envio">Envío a domicilio</option>
+                    <option value="retiro">Retiro en local</option>
+                  </select>
+                </div>
+
+                <!-- Sección envío -->
+                <div id="entrega-envio" class="metodo-seccion mb-3" style="display:none;">
+                  <div class="mb-3">
+                    <label class="form-label checkout-label">Calle y número</label>
+                    <input type="text" class="form-control checkout-input" id="envio-calle" placeholder="Ej: Av. Corrientes 1234">
+                  </div>
+                  <div class="row">
+                    <div class="col-7 mb-3">
+                      <label class="form-label checkout-label">Ciudad</label>
+                      <input type="text" class="form-control checkout-input" id="envio-ciudad" placeholder="Buenos Aires">
+                    </div>
+                    <div class="col-5 mb-3">
+                      <label class="form-label checkout-label">Código Postal</label>
+                      <input type="text" class="form-control checkout-input" id="envio-cp" placeholder="1234">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sección retiro -->
+                <div id="entrega-retiro" class="metodo-seccion info-pago-box mb-3" style="display:none;">
+                  <p class="mb-1">📍 <strong>Dirección:</strong> Av. Corrientes 1234, CABA</p>
+                  <p class="mb-1">🕐 <strong>Horario:</strong> Lunes a Viernes 10:00 - 18:00 hs</p>
+                  <p class="text-muted small mb-0">Te avisaremos cuando el pedido esté listo para retirar.</p>
+                </div>
+
+                <h6 class="checkout-section-title mb-3">Forma de pago</h6>
+                <div class="mb-3">
+                  <select class="form-select checkout-input" id="metodo-pago" onchange="mostrarMetodoPago()">
+                    <option value="" disabled selected>Seleccioná cómo querés pagar</option>
+                    <option value="tarjeta">Tarjeta de débito / crédito</option>
+                    <option value="transferencia">Transferencia bancaria</option>
+                  </select>
+                </div>
+
+                <!-- Sección tarjeta -->
+                <div id="metodo-tarjeta" class="metodo-seccion" style="display:none;">
+                  <div class="mb-3">
+                    <label class="form-label checkout-label">Tipo de tarjeta</label>
+                    <select class="form-select checkout-input" id="tipo-tarjeta">
+                      <option value="" disabled selected>Débito o Crédito</option>
+                      <option value="debito">Débito</option>
+                      <option value="credito">Crédito</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label checkout-label">Nombre en la tarjeta</label>
+                    <input type="text" class="form-control checkout-input" id="cc-nombre" placeholder="NOMBRE APELLIDO">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label checkout-label">Número de tarjeta</label>
+                    <input type="text" class="form-control checkout-input" id="cc-numero" placeholder="1234 5678 9012 3456" maxlength="19">
+                  </div>
+                  <div class="row">
+                    <div class="col-6 mb-3">
+                      <label class="form-label checkout-label">Vencimiento</label>
+                      <input type="text" class="form-control checkout-input" id="cc-vencimiento" placeholder="MM/AA" maxlength="5">
+                    </div>
+                    <div class="col-6 mb-3">
+                      <label class="form-label checkout-label">CVV</label>
+                      <input type="text" class="form-control checkout-input" id="cc-cvv" placeholder="123" maxlength="4">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sección transferencia -->
+                <div id="metodo-transferencia" class="metodo-seccion info-pago-box" style="display:none;">
+                  <p class="mb-1">🏦 <strong>CBU:</strong> 0000003100012345678901</p>
+                  <p class="mb-1">🔑 <strong>Alias:</strong> MOKAWAII.TIENDA</p>
+                  <p class="mb-1">👤 <strong>Titular:</strong> MoKawaii S.A.</p>
+                  <p class="text-muted small mb-0 mt-2">Después de transferir, envianos el comprobante por WhatsApp o email para confirmar tu pedido.</p>
+                </div>
+
+                <div id="pago-error" class="alert alert-danger py-2 small mt-3" style="display:none;">
+                  Por favor completá todos los campos requeridos.
+                </div>
+                <button class="btn btn-comprar w-100 mt-3" onclick="procesarPago()">Confirmar Compra 💳</button>
+              </div>
+
+              <!-- Paso 2: Procesando -->
+              <div id="paso-2" class="paso-pago text-center py-5" style="display:none;">
+                <div class="spinner-border mb-3" style="color:#41D2F2;width:3rem;height:3rem;" role="status"></div>
+                <p class="fw-bold fs-5">Procesando tu pago...</p>
+                <p class="text-muted small">Por favor no cierres esta ventana</p>
+              </div>
+
+              <!-- Paso 3: Confirmación -->
+              <div id="paso-3" class="paso-pago text-center py-4" style="display:none;">
+                <div class="check-circle mb-3">✓</div>
+                <h5 class="fw-bold mb-2">¡Compra confirmada!</h5>
+                <p class="text-muted">Tu pedido fue recibido con éxito.</p>
+                <p>Número de orden: <strong id="numero-orden" style="color:#41D2F2;"></strong></p>
+                <p class="text-muted small">Recibirás un email de confirmación pronto.</p>
+                <button class="btn btn-comprar mt-2 px-4" data-bs-dismiss="modal">Volver a la tienda</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- Detalle del Producto -->
+    <section id="detalle-producto" class="container py-5">
+      <div class="detalle-badge mb-2">⭐ Producto destacado</div>
+      <h2 class="text-center mb-1">Capybara con papas fritas</h2>
+      <p class="text-center detalle-precio-grande mb-4">$29.000</p>
+
+      <div class="row mb-4 detalle-producto">
+        <div class="col-12 col-md-5">
+          <div class="gallery d-flex flex-wrap gap-3 justify-content-center">
+            <img src="imgs/Producto_detalle/capypapafrita.jpg" class="img-fluid rounded shadow gallery-img" alt="Capibara con papas fritas - Vista 1">
+            <img src="imgs/Producto_detalle/capypapafrita2.jpg" class="img-fluid rounded shadow gallery-img" alt="Capibara con papas fritas - Vista 2">
+            <img src="imgs/Producto_detalle/capypapafrita3.jpg" class="img-fluid rounded shadow gallery-img" alt="Capibara con papas fritas - Vista 3">
+            <img src="imgs/Producto_detalle/capypapafrita4.jpg" class="img-fluid rounded shadow gallery-img" alt="Capibara con papas fritas - Vista 4">
+          </div>
+        </div>
+        <div class="col-12 col-md-6 d-flex align-items-start mt-4 mt-md-0">
+          <div class="info-detalle w-100">
+            <h4 class="mb-3">Detalles del Producto</h4>
+            <ul class="list-unstyled detalle-lista">
+              <li>🧵 <strong>Material:</strong> Poliéster y algodón de alta calidad</li>
+              <li>📏 <strong>Dimensiones:</strong> 30 cm de alto</li>
+              <li>🎨 <strong>Color:</strong> Marrón con verde</li>
+              <li>👶 <strong>Apto para:</strong> Niños mayores de 3 años</li>
+            </ul>
+
+            <div class="detalle-medios-pago my-3">
+              <p class="mb-1">💳 Tarjetas de crédito y débito</p>
+              <p class="mb-1">📅 Hasta 12 cuotas sin interés</p>
+              <p class="mb-0">📦 Envíos a todo el país</p>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 mt-4">
+              <div class="detalle-cantidad d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-qty" onclick="this.nextElementSibling.value > 1 ? this.nextElementSibling.value-- : null">−</button>
+                <input type="number" id="detalle-qty" value="1" min="1" max="99" class="detalle-qty-input">
+                <button class="btn btn-sm btn-qty" onclick="this.previousElementSibling.value++">+</button>
+              </div>
+              <button class="btn btn-comprar flex-grow-1" onclick="agregarDesdeDetalle()">Agregar al carrito 🛒</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="crear-peluche" class="py-5">
+      <div class="container">
+        <!-- Título -->
+        <h2 class="text-center mb-4">¡Crea tu propio peluche personalizado!</h2>
+    
+        <!-- Acordeón -->
+        <div class="accordion" id="accordionPasos">
+          <!-- Paso 1 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Paso 1: Selecciona un modelo
+              </button>
+            </h3>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionSteps">
+              <div class="accordion-body">
+                <div class="row align-items-center">
+                  <div class="col-md-6 text-center">
+                    <img src="imgs/Personalizacion/mokachan_inicio.jpg" alt="Paso 1: Selecciona un modelo" class="img-fluid rounded">
+                  </div>
+                  <div class="col-md-6">
+                    <p>¡Este es el primer paso para hacer realidad tu peluche personalizado! Tenemos una amplia variedad de modelos disponibles, desde animales clásicos como ositos y conejitos, hasta diseños mágicos como unicornios y dragones. Cada modelo está hecho con materiales suaves y detalles precisos para garantizar que sea perfecto para abrazar. ¡Elige el que más te guste y comienza a dar vida a tu nueva creación!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Paso 2 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Paso 2: Elegí su ropa
+              </button>
+            </h3>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionSteps">
+              <div class="accordion-body">
+                <div class="row align-items-center">
+                  <div class="col-md-6 text-center">
+                    <img src="imgs/Personalizacion/mokachan_ropa.jpg" alt="Paso 2: Eligi su ropa" class="img-fluid rounded">
+                  </div>
+                  <div class="col-md-6">
+                    <p>Ahora es momento de darle estilo a tu peluche. Tenemos una gran selección de ropa adorable: camisetas con diseños únicos, vestidos coloridos, gorritos tejidos y disfraces temáticos. ¿Prefieres un estilo casual o algo más elegante? La ropa de tu peluche hará que tenga una personalidad especial y única. ¡Explora nuestras opciones y haz que luzca increíble!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Paso 3 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Paso 3: Elegí su color
+              </button>
+            </h3>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionSteps">
+              <div class="accordion-body">
+                <div class="row align-items-center">
+                  <div class="col-md-6 text-center">
+                    <img src="imgs/Personalizacion/mokachan_color.jpg" alt="Paso 3: Elegi su color" class="img-fluid rounded">
+                  </div>
+                  <div class="col-md-6">
+                    <p>El color es clave para hacer tu peluche único. Puedes elegir entre tonos clásicos como blanco y marrón, o experimentar con colores llamativos como azul cielo, rosa pastel o incluso patrones de arcoíris. Además, ofrecemos opciones con texturas y estampados especiales, como lunares o rayas. ¡Haz que tu peluche refleje tu estilo y creatividad!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Paso 4 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Paso 4: Finaliza tu pedido
+              </button>
+            </h3>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionSteps">
+              <div class="accordion-body">
+                <div class="row align-items-center">
+                  <div class="col-md-6 text-center">
+                    <img src="imgs/Personalizacion/mokachan_terminado.jpg" alt="Paso 4: Finaliza tu pedido" class="img-fluid rounded">
+                  </div>
+                  <div class="col-md-6">
+                    <p>¡Estas a un paso de crear tu propio peluche! Para finalizar, por favor <a href="#contacto" class="text-primary">rellena este formulario</a>. Aquí podrás confirmar los detalles de tu pedido, proporcionarnos tu información de envío y seleccionar tu método de pago. Una vez hecho esto, comenzaremos a fabricar tu peluche con amor y cuidado, asegurándonos de que llegue a tus manos lo más rápido posible. ¡Gracias por confiar en nosotros para crear tu nuevo amigo de peluche!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <!-- Sección de Testimonios -->
+    <section id="testimonios" class="py-5 testimonios-section">
+      <div class="container">
+        <h2 class="text-center mb-2">Lo que dicen nuestros clientes</h2>
+        <p class="text-center text-muted mb-5 testimonios-sub">Más de 1.000 clientes felices</p>
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <div class="testimonio-card">
+              <div class="estrellas">★★★★★</div>
+              <p class="testimonio-texto">"¡Mi hija amó su nuevo capybara! Los materiales son súper suaves y resistentes. Llegó perfecto y antes de lo esperado."</p>
+              <div class="testimonio-autor">
+                <div class="testimonio-avatar">V</div>
+                <div>
+                  <strong>Valentina R.</strong>
+                  <small class="d-block text-muted">Buenos Aires</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="testimonio-card">
+              <div class="estrellas">★★★★★</div>
+              <p class="testimonio-texto">"Muy recomendable, ideal como regalo de cumpleaños. El envío fue rapidísimo y el peluche es exactamente como en las fotos."</p>
+              <div class="testimonio-autor">
+                <div class="testimonio-avatar">M</div>
+                <div>
+                  <strong>Marcos T.</strong>
+                  <small class="d-block text-muted">Córdoba</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="testimonio-card">
+              <div class="estrellas">★★★★☆</div>
+              <p class="testimonio-texto">"Mandé a hacer uno personalizado y el resultado fue increíble. Se notó el cuidado en cada detalle. Sin duda vuelvo a comprar."</p>
+              <div class="testimonio-autor">
+                <div class="testimonio-avatar">L</div>
+                <div>
+                  <strong>Lucía P.</strong>
+                  <small class="d-block text-muted">Rosario</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Contact Form Section -->
+        <section id="contacto" class="container mt-5 pb-5">
+          <h2 class="text-center mb-2">Contacto</h2>
+          <p class="text-center mb-4">
+            Completá el formulario y nos ponemos en contacto para continuar con tu pedido de <strong>MoKawaii</strong>.
+          </p>
+
+          <!-- Mensaje de éxito (oculto) -->
+          <div id="contacto-exito" class="contacto-exito-msg" style="display:none;">
+            <div class="check-circle mb-3" style="margin:0 auto;">✓</div>
+            <h5 class="fw-bold mb-1">¡Mensaje enviado!</h5>
+            <p class="text-muted mb-0">Te contactaremos a la brevedad. ¡Gracias por elegirnos!</p>
+          </div>
+
+          <form id="contacto-form" onsubmit="enviarContacto(event)">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="contacto-nombre" class="form-label">👤 Nombre</label>
+                <input type="text" class="form-control" id="contacto-nombre" placeholder="Tu nombre" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="contacto-apellido" class="form-label">👤 Apellido</label>
+                <input type="text" class="form-control" id="contacto-apellido" placeholder="Tu apellido" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="contacto-email" class="form-label">✉️ Email</label>
+                <input type="email" class="form-control" id="contacto-email" placeholder="tuemail@ejemplo.com" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="contacto-telefono" class="form-label">📱 Teléfono</label>
+                <input type="tel" class="form-control" id="contacto-telefono" placeholder="+54 11 0000-0000" required>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="contacto-asunto" class="form-label">📝 Asunto</label>
+                <select class="form-select" id="contacto-asunto" required>
+                  <option value="" disabled selected>¿En qué te podemos ayudar?</option>
+                  <option value="consulta">Consulta sobre un producto</option>
+                  <option value="personalizado">Quiero un peluche personalizado</option>
+                  <option value="pedido">Consulta sobre mi pedido</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="contacto-mensaje" class="form-label">💬 Mensaje</label>
+                <textarea class="form-control" id="contacto-mensaje" rows="4" placeholder="Contanos qué necesitás..."></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+              </div>
+            </div>
+          </form>
+        </section>
+        
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/5491100000000" target="_blank" class="wsp-flotante" title="Contactanos por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30" height="30">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <a class="logo" href="#">MoKawaii</a>
+        
+        <!-- Redes sociales -->
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="imgs/Iconos/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.twitter.com" target="_blank">
+            <img src="imgs/Iconos/twitter.png" alt="Twitter">
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <img src="imgs/Iconos/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.tiktok.com/" target="_blank">
+            <img src="imgs/Iconos/tiktok.png" alt="TikTok">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-autor-texto">Diseñado y desarrollado por<br>
+          <a href="https://tomasfreelance.netlify.app/" target="_blank" class="footer-autor-link">Tomas Martinez</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="newsletter-bar">
+      <p class="newsletter-titulo">📬 Suscribite y recibí novedades y descuentos exclusivos</p>
+      <div class="newsletter-form">
+        <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Tu email...">
+        <button class="newsletter-btn" onclick="suscribirNewsletter()">Suscribirse</button>
+      </div>
+      <p id="newsletter-ok" class="newsletter-ok" style="display:none;">✓ ¡Gracias por suscribirte!</p>
+    </div>
+
+    <div class="footer-bottom">
+      <small>&copy; 2024 MoKawaii. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+
+
+  
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
